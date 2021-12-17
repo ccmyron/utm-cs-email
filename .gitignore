@@ -1,0 +1,9 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# IDE and Build files
+/.idea
+/build

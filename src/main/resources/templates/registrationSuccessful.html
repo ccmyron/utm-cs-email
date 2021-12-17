@@ -1,0 +1,16 @@
+<!doctype html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="fragments/layout/default"
+        th:with="pageTitle='Account registered'">
+    <body>
+        <div layout:fragment="heading">Your account has been registered</div>
+        <div layout:fragment="content">
+            <h3>Congratulations, <span th:text="${name}"></span>!</h3>
+            <p>
+                Your account has been successfully registered. We have sent an email to your address
+                <span th:text="${email}"></span>. Please follow link in the email to confirm your account.
+            </p>
+        </div>
+    </body>
+</html>

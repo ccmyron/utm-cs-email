@@ -1,0 +1,24 @@
+<!doctype html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="fragments/layout/default"
+        th:with="pageTitle='Register a new user'">
+    <body>
+        <div layout:fragment="heading">Register a new user</div>
+        <div layout:fragment="content">
+            <form class="registration-form" th:action="@{/register}" method="post">
+                <div class="registration-form__field">
+                    <label class="registration-form__label" for="name">Name</label>
+                    <input class="registration-form__text-input" type="text" name="name" id="name" placeholder="Username" required />
+                </div>
+
+                <div class="registration-form__field">
+                    <label class="registration-form__label" for="email">Email</label>
+                    <input class="registration-form__text-input" type="email" name="email" id="email" placeholder="Email address" required />
+                </div>
+
+                <input class="registration-form__submit-button" type="submit" value="Register" />
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="fragments/layout/default"
+        th:with="pageTitle='All users'">
+    <body>
+        <div layout:fragment="heading">Registered users</div>
+        <div layout:fragment="content">
+            <table class="users-table">
+                <tr class="users-table__heading-row">
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Email confirmed</th>
+                </tr>
+                <tr class="users-table__user-row" th:each="user : ${users}">
+                    <td th:text="${user.name}"></td>
+                    <td th:text="${user.email}"></td>
+                    <td th:text="${user.confirmed} ? '✓' : '✕'"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
