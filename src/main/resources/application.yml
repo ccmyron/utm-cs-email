@@ -3,8 +3,8 @@ server:
 
 confirmation-channels.email:
   smtp:
-    host: smtp.mailgun.org
-    port: 587
-    sender: miron.cristiancatalin@gmail.com
-    username: postmaster@sandbox26b0cb145c3b40b7a276dc201aaaf68a.mailgun.org
-    password: cdeb1175fa2e23ed861eb1c66fc74eb3-8ed21946-6543ab36
+    host: "<smtp_host>"
+    port: "<smtp_port>"
+    sender: "<email_sender>"
+    username: "<smtp_username>"
+    password: "<smtp_password>"
